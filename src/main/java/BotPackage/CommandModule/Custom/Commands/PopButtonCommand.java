@@ -1,7 +1,8 @@
-package BotPackage.Commands;
+package BotPackage.CommandModule.Custom.Commands;
 
-import BotPackage.Annotations.Core;
-import BotPackage.Models.QueueButtonCommand;
+import BotPackage.CommandModule.Annotations.Core;
+import BotPackage.CommandModule.Custom.Models.QueueButtonCommand;
+import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageText;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -11,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Core
+@Component
 public class PopButtonCommand extends QueueButtonCommand {
     public PopButtonCommand() {
         super("pop", new ArrayList<>(),

@@ -1,11 +1,12 @@
-package BotPackage.Commands;
+package BotPackage.CommandModule.Custom.Commands;
 
-import BotPackage.Annotations.Core;
-import BotPackage.Annotations.Information;
-import BotPackage.Annotations.Injection;
-import BotPackage.Models.Command;
-import BotPackage.Realisation.DataBaseController;
-import BotPackage.Realisation.User;
+import BotPackage.CommandModule.Annotations.Core;
+import BotPackage.CommandModule.Annotations.Information;
+import BotPackage.CommandModule.Models.Command;
+import BotPackage.Realisation.Custom.DataBaseController;
+import BotPackage.Realisation.Custom.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -15,14 +16,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 @Core
+@Component
 @Information
 public class RegisterCommand extends Command {
-    @Injection
-    private DataBaseController dataBaseController;
+    private final DataBaseController dataBaseController;
 
-    public RegisterCommand() {
+    public RegisterCommand(@Autowired DataBaseController dataBaseController) {
         super("register", new ArrayList<>(Arrays.asList(Argument.STRING, Argument.STRING)),
                 "format: /register user_name user_group_number");
+        this.dataBaseController = dataBaseController;
     }
 
     @Override

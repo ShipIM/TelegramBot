@@ -1,8 +1,7 @@
-package BotPackage.Commands;
+package BotPackage.CommandModule.Custom.Commands;
 
-import BotPackage.Annotations.Information;
-import BotPackage.Models.Command;
-import BotPackage.Annotations.Core;
+import BotPackage.CommandModule.Annotations.Information;
+import BotPackage.CommandModule.Models.Command;
 import org.reflections.Reflections;
 import org.reflections.util.ConfigurationBuilder;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
@@ -13,8 +12,6 @@ import java.io.Serializable;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
-@Core
-@Information
 public class HelpCommand extends Command {
     public HelpCommand() {
         super("help", new ArrayList<>(), "Shows all available commands.");

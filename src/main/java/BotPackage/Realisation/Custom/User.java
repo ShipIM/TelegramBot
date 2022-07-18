@@ -1,4 +1,4 @@
-package BotPackage.Realisation;
+package BotPackage.Realisation.Custom;
 
 public class User {
     private final String name;

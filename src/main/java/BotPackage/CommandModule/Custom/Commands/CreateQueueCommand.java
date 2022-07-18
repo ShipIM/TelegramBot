@@ -1,8 +1,9 @@
-package BotPackage.Commands;
+package BotPackage.CommandModule.Custom.Commands;
 
-import BotPackage.Annotations.Information;
-import BotPackage.Models.Command;
-import BotPackage.Annotations.Core;
+import BotPackage.CommandModule.Annotations.Information;
+import BotPackage.CommandModule.Models.Command;
+import BotPackage.CommandModule.Annotations.Core;
+import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -15,6 +16,7 @@ import java.util.Arrays;
 import java.util.Collections;
 
 @Core
+@Component
 @Information
 public class CreateQueueCommand extends Command {
     public CreateQueueCommand() {

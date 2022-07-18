@@ -1,4 +1,6 @@
-package BotPackage.Models;
+package BotPackage.CommandModule.Custom.Models;
+
+import BotPackage.CommandModule.Models.Command;
 
 import java.util.ArrayList;
 import java.util.List;

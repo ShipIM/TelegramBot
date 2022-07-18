@@ -1,7 +1,8 @@
-package BotPackage.Commands;
+package BotPackage.CommandModule.Custom.Commands;
 
-import BotPackage.Models.Command;
-import BotPackage.Annotations.Core;
+import BotPackage.CommandModule.Models.Command;
+import BotPackage.CommandModule.Annotations.Core;
+import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -10,6 +11,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 @Core
+@Component
 public class NotACommand extends Command {
     public NotACommand() {
         super("not_a_command", new ArrayList<>(), "everything illegal");

@@ -1,7 +1,5 @@
 package BotPackage.Models;
 
-import BotPackage.Execution.Injector;
-
 public abstract class Entity {
     private String name;
     private String description;
@@ -9,8 +7,6 @@ public abstract class Entity {
     public Entity(String name, String description) {
         this.name = name;
         this.description = description;
-
-        Injector.getInjector().inject(this);
     }
 
     public Entity() {

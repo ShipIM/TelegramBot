@@ -1,4 +1,4 @@
-package BotPackage.Realisation;
+package BotPackage.Realisation.Custom;
 
 import BotPackage.Models.Controller;
 

@@ -1,4 +1,4 @@
-package BotPackage.Annotations;
+package BotPackage.CommandModule.Annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -8,5 +8,5 @@ import java.lang.annotation.Target;
 @Target(value = ElementType.TYPE)
 @Retention(value = RetentionPolicy.RUNTIME)
 
-public @interface Information {
+public @interface Core {
 }
